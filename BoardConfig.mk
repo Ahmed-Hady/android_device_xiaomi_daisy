@@ -1,0 +1,48 @@
+# inherit from the proprietary version
+-include vendor/xiaomi/daisy/BoardConfigVendor.mk
+-include device/xiaomi/msm8953-common/BoardConfigCommon.mk
+
+TARGET_ARCH := arm64
+TARGET_ARCH_VARIANT := armv8-a
+TARGET_NO_BOOTLOADER := true
+TARGET_BOARD_PLATFORM := MSM8953
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno506
+TARGET_BOARD_SUFFIX := _64
+TARGET_CPU_ABI := arm64-v8a
+TARGET_CPU_ABI2 :=
+TARGET_CPU_VARIANT := cortex-a7
+TARGET_CPU_SMP := true
+ARCH_ARM_HAVE_TLS_REGISTER := true
+
+TARGET_BOOTLOADER_BOARD_NAME := daisy
+
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78af000 buildvariant=user veritykeyid=id:5560e7863b4d8118c2f1b065595cf93bb2447992
+BOARD_KERNEL_BASE := 0x80000000
+BOARD_KERNEL_PAGESIZE := 2048
+
+# fix this up by examining /proc/mtd on a running device
+BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2684354560
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 3112173568
+BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
+BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
+BOARD_FLASH_BLOCK_SIZE := 131072
+
+# recovery
+BOARD_HAS_LARGE_FILESYSTEM := true
+TARGET_USERIMAGES_USE_EXT4 := true
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_ROOT_EXTRA_FOLDERS := dsp firmware persist
+BOARD_HAS_REMOVABLE_STORAGE := true
+BOARD_SUPPRESS_SECURE_ERASE := true
+TARGET_USERIMAGES_USE_EXT4 := true
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_VENDOR := vendor
+BOARD_USES_RECOVERY_AS_BOOT := true
+TARGET_NO_RECOVERY := true
+AB_OTA_UPDATER := true
+
+TARGET_PREBUILT_KERNEL := device/xiaomi/daisy/prebuilt/kernel
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/enable_dt2w"
+
