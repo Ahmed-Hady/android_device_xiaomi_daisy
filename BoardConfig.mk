@@ -42,6 +42,5 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
 AB_OTA_UPDATER := true
 
-TARGET_PREBUILT_KERNEL := device/xiaomi/daisy/prebuilt/kernel
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/enable_dt2w"
 
