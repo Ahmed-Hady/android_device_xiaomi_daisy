@@ -1,2 +1,4 @@
-add_lunch_combo lineage_daisy-eng
+add_lunch_combo aosp_daisy-eng
+add_lunch_combo aosp_daisy-user
+add_lunch_combo aosp_daisy-userdebug
 
