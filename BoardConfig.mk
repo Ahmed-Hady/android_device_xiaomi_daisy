@@ -1,3 +1,6 @@
+
+DEVICE_PATH := device/xiaomi/daisy
+
 # inherit from the proprietary version
 -include vendor/xiaomi/daisy/BoardConfigVendor.mk
 -include device/xiaomi/msm8953-common/BoardConfigCommon.mk
@@ -29,6 +32,7 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
