@@ -49,6 +49,9 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_ROOT_EXTRA_FOLDERS := bt_firmware dsp firmware persist
 TARGET_SYSTEMIMAGE_USE_EXT4 := true
 
+# Security Patch Hack to prevent Anti Rollback
+PLATFORM_SECURITY_PATCH := 2018-11-01
+
 # recovery
 AB_OTA_UPDATER := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
