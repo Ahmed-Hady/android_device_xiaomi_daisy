@@ -28,5 +28,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="daisy-user 9.0.0 PIE.1.0 9.0 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := "xiaomi/daisy/daisy_sprout:9.0.0/PIE.1.0 9.0/9.0:user/release-keys"
+BUILD_FINGERPRINT := "xiaomi/daisy/daisy_sprout:9.0.0/PIE.1.0-9.0/9.0:user/release-keys"
 
